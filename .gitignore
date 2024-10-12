@@ -1,2 +1,5 @@
 /.vscode
 /.dccache
+.venv/
+.venv
+/.venv
