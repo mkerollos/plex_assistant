@@ -1,7 +1,7 @@
 {
   "domain": "plex_assistant",
   "name": "Plex Assistant",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "documentation": "https://github.com/mkerollos/plex_assistant",
   "dependencies": ["media_player"],
   "config_flow": true,
