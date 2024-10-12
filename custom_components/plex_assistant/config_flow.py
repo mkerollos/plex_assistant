@@ -3,13 +3,16 @@ from homeassistant.core import callback
 
 import voluptuous as vol
 
-from .const import DOMAIN, HA_VER_SUPPORTED
+from .const import DOMAIN, HA_VER_SUPPORTED, _LOGGER
+
 from .localize import translations
 
 
 def get_devices(_self):
     devices = []
     for entity in list(_self.hass.data["media_player"].entities):
+        _LOGGER.info(f"Found Entity: {entity} with type {type(entity)}")
+        _LOGGER.info(f"Found device_info: {entity.device_info} with type {type(entity.device_info)}")
         info = str(entity.device_info["identifiers"]) if entity.device_info else ""
         if "plex" in info or "cast" in info:
             try:
